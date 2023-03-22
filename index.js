@@ -22,13 +22,21 @@ Test the function with different input numbers to generate multiplication tables
 function multiplicationTable(num){
     let product;
     for (let i=1;i<=10;i++){
-        product = num*i;
-        console.log((`${num} x ${i} = ${ product}`))
+        if (!Number.isInteger(num)){
+            break
+
+        }else{
+            product = num*i;
+            console.log((`${num} x ${i} = ${ product}`))
+        }
+        }
+       
     }
     
-}
+
 
 multiplicationTable(12)
 multiplicationTable(5)
 multiplicationTable(7)
+multiplicationTable("ABCD")
 
